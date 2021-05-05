@@ -1,0 +1,6 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.fontSize": 11,
+    "editor.fontFamily": "Monaco, Menlo, 'Courier New', monospace",
+    "editor.wordWrap": "on"
+}

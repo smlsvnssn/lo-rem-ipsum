@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="sv" >
+<head>
+    <meta charset="UTF-8">
+    <title>Lörem ipsum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <link rel="preload" href="./style.css" as="style">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="icon" sizes="192x192" href="icon-192x192.png">
+    <link rel="apple-touch-icon" href="/icon-192x192.png">
+
+    <meta name="theme-color" content="#100d26" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Lörem ipsum">
+    <meta name="apple-mobile-web-app-title" content="Lörem ipsum">
+    <meta name="msapplication-starturl" content="/index.html">
+    <meta name="Description" content="Lorem ipsum på svenskisch.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div id="wrapper" lang="sv" contentEditable="true" spellcheck="false">
+    </div>
+
+    <nav class="settings hidden">
+        <form>
+            <div>
+                <label for="formIsActive">Förinställt</label><input type="checkbox" class="switch" id="formIsActive">
+                <label for="formIsActive">Dina inställningar</label>
+            </div>
+            <div id="sliders" class="fieldset">
+                <div>
+                    <legend>Antal stycken</legend>
+                    <input type="range" id="numberOfParagraphs" class="slider" value="5" min="1" max="100" step="1">
+                    <input type="number" id="numberOfParagraphs" class="slider" value="5" min="1" max="100" step="1">
+                </div>
+                <div>
+                    <legend>Meningar per stycke</legend>
+                    <input type="range" id="sentencesPerParagraph" class="slider" value="5" min="1" max="20" step="1">
+                    <input type="number" id="sentencesPerParagraph" class="slider" value="5" min="1" max="20" step="1">
+                </div>
+                <div>
+                    <legend>Längd per mening</legend>
+                    <input type="range" id="maxSentenceLength" class="slider" value="5" min="1" max="20" step="1">
+                    <input type="number" id="maxSentenceLength" class="slider" value="5" min="1" max="20" step="1">
+                </div>
+                <div>
+                    <legend>Minsta längd per mening</legend>
+                    <input type="range" id="minSentenceLength" class="slider" value="1" min="1" max="20" step="1">
+                    <input type="number" id="minSentenceLength" class="slider" value="1" min="1" max="20" step="1">
+                </div>
+                <div>
+                    <legend>Andel nyord (%)</legend>
+                    <input type="range" id="nyordFrequency" class="slider" value="10" min="0" max="100" step="1">
+                    <input type="number" id="nyordFrequency" class="slider" value="10" min="0" max="100" step="1">
+                </div>
+                <div>
+                    <legend>Andel akademiska neologismer (%)</legend>
+                    <input type="range" id="neologismerFrequency" class="slider" value="5" min="0" max="100" step="1">
+                    <input type="number" id="neologismerFrequency" class="slider" value="5" min="0" max="100" step="1">
+                </div>
+                <div>
+                    <legend>Andel namn (%)</legend>
+                    <input type="range" id="namnFrequency" class="slider" value="0" min="0" max="100" step="1">
+                    <input type="number" id="namnFrequency" class="slider" value="0" min="0" max="100" step="1">
+                </div>
+                <div>
+                    <legend>Punchline</legend>
+                    <input type="text" id="punchline" value="Du kan vara drabbad.">
+                </div>
+            </div>
+
+            <div id="switchar" class="fieldset">
+                <div>
+                    <input type="checkbox" class="switch" id="isHeadline">
+                    <label for="isHeadline">Rubrik</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="switch" id="isName">
+                    <label for="isName">Namn</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="switch" id="useLörem" checked>
+                    <label for="useLörem">Använd "Lörem ipsum" i början</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="switch" id="wrapInDiv">
+                    <label for="wrapInDiv">Lägg en &lt;div&gt; runt texten</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="switch" id="alwaysWrapParagraph" checked>
+                    <label for="alwaysWrapParagraph">Gör alltid styckeformatering</label>
+                </div>
+            </div>
+        </form>
+        <div id="functionCall" contentEditable="true" spellcheck="false"></div>
+    </nav>
+
+    <div class="rerun icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+            <g>
+                <path d="M22.594,5.557c-0.258-0.1-0.547,0.027-0.646,0.285L21.11,7.997c-1.59-3.545-5.178-5.927-9.156-5.927   c-4.407,0-8.348,2.956-9.582,7.188c-0.077,0.265,0.075,0.543,0.34,0.62c0.269,0.078,0.543-0.075,0.62-0.34   C4.443,5.73,7.988,3.07,11.954,3.07c3.63,0,6.899,2.202,8.299,5.462l-2.227-0.865c-0.258-0.099-0.547,0.027-0.646,0.285   C17.279,8.21,17.407,8.5,17.665,8.6l3.257,1.265c0.06,0.023,0.12,0.034,0.181,0.034c0.046,0,0.094-0.006,0.14-0.02   c0.039-0.011,0.07-0.035,0.104-0.054c0.016-0.009,0.032-0.014,0.047-0.025c0.073-0.053,0.126-0.122,0.162-0.203   c0.003-0.007,0.011-0.01,0.014-0.017l1.311-3.375C22.979,5.947,22.852,5.657,22.594,5.557z"></path>
+                <path d="M21.27,14.234c-0.27-0.074-0.542,0.076-0.62,0.341c-1.11,3.808-4.656,6.468-8.622,6.468c-3.629,0-6.898-2.202-8.299-5.462   l2.226,0.864c0.256,0.1,0.547-0.027,0.647-0.285c0.1-0.257-0.028-0.547-0.285-0.646l-3.257-1.265   c-0.021-0.008-0.042-0.006-0.063-0.011c-0.031-0.008-0.06-0.014-0.093-0.016c-0.037-0.002-0.072,0.002-0.108,0.008   c-0.019,0.003-0.038-0.001-0.058,0.004c-0.011,0.003-0.018,0.011-0.028,0.015c-0.033,0.012-0.063,0.03-0.093,0.049   c-0.025,0.016-0.051,0.031-0.073,0.051c-0.023,0.021-0.041,0.047-0.061,0.073c-0.02,0.027-0.04,0.054-0.054,0.085   c-0.005,0.01-0.014,0.017-0.018,0.028l-1.311,3.375c-0.1,0.257,0.028,0.547,0.285,0.646c0.06,0.023,0.121,0.034,0.181,0.034   c0.2,0,0.389-0.121,0.466-0.319l0.837-2.154c1.589,3.545,5.178,5.927,9.156,5.927c4.408,0,8.348-2.956,9.583-7.188   C21.688,14.59,21.535,14.312,21.27,14.234z"></path>
+            </g>
+        </svg></div>
+
+    <div class="cogs icon"><svg version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g fill="#000">
+                <path d="M11.998 7.366c-2.563 0-4.648 2.085-4.648 4.648 0 2.562 2.085 4.647 4.648 4.647 2.562 0 4.647-2.085 4.647-4.647 .001-2.563-2.084-4.648-4.647-4.648Zm0 8.296c-2.012 0-3.648-1.637-3.648-3.647 0-2.012 1.636-3.648 3.648-3.648 2.011 0 3.647 1.636 3.647 3.648 .001 2.01-1.636 3.647-3.647 3.647Z"></path>
+                <path d="M23.583 10.398c-.031-.223-.207-.398-.431-.427l-2.699-.354c-.186-.655-.447-1.287-.781-1.884l1.661-2.161c.137-.178.138-.427.002-.606 -.652-.864-1.422-1.633-2.284-2.286 -.181-.135-.428-.135-.606.002l-2.16 1.66c-.598-.335-1.229-.597-1.886-.783l-.354-2.7c-.029-.223-.204-.399-.428-.43 -1.1-.153-2.126-.154-3.229-.001 -.224.03-.398.207-.428.43l-.354 2.7c-.658.186-1.291.448-1.89.783l-2.16-1.661c-.18-.137-.427-.138-.606-.002 -.851.644-1.641 1.433-2.284 2.283 -.137.18-.136.428.001.607l1.66 2.16c-.335.598-.598 1.232-.785 1.891l-2.7.354c-.223.029-.399.204-.43.427 -.148 1.072-.148 2.158 0 3.229 .031.224.207.398.43.428l2.7.354c.186.659.449 1.293.785 1.892l-1.66 2.16c-.137.179-.138.427-.002.606 .645.85 1.435 1.64 2.285 2.282 .179.136.427.134.606-.003l2.161-1.66c.598.335 1.231.598 1.89.783l.353 2.699c.029.224.204.4.428.431 .55.076 1.081.113 1.611.113 .533 0 1.066-.038 1.618-.114 .224-.03.398-.207.428-.43l.354-2.701c.656-.187 1.288-.448 1.886-.783l2.16 1.66c.179.138.428.137.606.002 .861-.651 1.631-1.421 2.284-2.285 .136-.18.135-.428-.002-.606l-1.66-2.16c.334-.599.596-1.23.78-1.885l2.7-.354c.223-.029.399-.204.43-.428 .153-1.103.153-2.13-7.10543e-15-3.232Zm-.944 2.718l-2.649.347c-.205.027-.372.178-.421.38 -.188.783-.499 1.534-.924 2.23 -.107.177-.096.401.03.565l1.629 2.119c-.466.572-.987 1.094-1.558 1.559l-2.119-1.629c-.166-.126-.389-.139-.566-.03 -.693.426-1.444.737-2.231.927 -.201.049-.352.216-.379.421l-.347 2.65c-.744.077-1.459.076-2.203.001l-.347-2.647c-.027-.206-.177-.373-.379-.422 -.789-.189-1.541-.501-2.235-.927 -.176-.106-.402-.096-.566.03l-2.12 1.629c-.565-.461-1.095-.99-1.557-1.557l1.628-2.118c.126-.164.138-.39.03-.566 -.426-.695-.739-1.447-.928-2.237 -.048-.201-.216-.352-.421-.379l-2.648-.347c-.075-.731-.075-1.469 0-2.201l2.648-.347c.205-.027.373-.177.421-.379 .189-.79.502-1.542.928-2.237 .108-.177.097-.402-.03-.566l-1.628-2.119c.462-.565.991-1.095 1.558-1.556l2.119 1.628c.164.127.39.139.566.03 .695-.425 1.447-.737 2.235-.926 .201-.048.352-.216.379-.421l.347-2.648c.746-.077 1.459-.077 2.203.001l.347 2.649c.027.205.178.373.379.421 .787.189 1.538.501 2.231.926 .178.107.4.096.566-.03l2.119-1.629c.57.465 1.093.987 1.558 1.559l-1.63 2.12c-.126.164-.138.389-.03.566 .426.694.736 1.445.925 2.23 .049.202.216.352.422.379l2.648.347c.078.744.078 1.459 3.55271e-15 2.204Z"></path>
+            </g>
+        </svg></div>
+
+    <div class="copy icon"><svg version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g fill="#000">
+                <path d="M23.854 10.01l-2.84-2.861c-.094-.095-.222-.148-.354-.148h-12.16c-.276 0-.5.224-.5.5v16c0 .276.224.5.5.5h15c.276 0 .5-.224.5-.5v-13.139c0-.132-.052-.259-.146-.352Zm-.854 12.991h-14v-15h11.452l2.548 2.567v12.433Z"></path>
+                <path d="M20 18.001h-8c-.276 0-.5.224-.5.5 0 .276.224.5.5.5h8c.276 0 .5-.224.5-.5 0-.276-.224-.5-.5-.5Z"></path>
+                <path d="M20 15.001h-8c-.276 0-.5.224-.5.5 0 .276.224.5.5.5h8c.276 0 .5-.224.5-.5 0-.276-.224-.5-.5-.5Z"></path>
+                <path d="M20 12.001h-8c-.276 0-.5.224-.5.5 0 .276.224.5.5.5h8c.276 0 .5-.224.5-.5 0-.276-.224-.5-.5-.5Z"></path>
+                <path d="M6.5 15.001h-5.5v-14h11.452l2.547 2.567v1.933c0 .276.224.5.5.5 .276 0 .5-.224.5-.5v-2.139c0-.132-.052-.258-.146-.352l-2.839-2.861c-.094-.095-.222-.148-.355-.148h-12.159c-.276 0-.5.224-.5.5v15c0 .276.224.5.5.5h6c.276 0 .5-.224.5-.5 0-.276-.224-.5-.5-.5Z"></path>
+                <path d="M5.999 10.001h-1.999c-.276 0-.5.224-.5.5 0 .276.224.5.5.5h2c.276 0 .5-.224.5-.5 0-.276-.225-.5-.501-.5Z"></path>
+                <path d="M5.999 7.001h-1.999c-.276 0-.5.224-.5.5 0 .276.224.5.5.5h2c.276 0 .5-.224.5-.5 0-.276-.225-.5-.501-.5Z"></path>
+                <path d="M12.5 4.501c0-.276-.224-.5-.5-.5h-8c-.276 0-.5.224-.5.5 0 .276.224.5.5.5h8c.276 0 .5-.224.5-.5Z"></path>
+            </g>
+        </svg>
+    </div>
+
+    <div class="info icon"><svg version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g fill="#000">
+                <path d="M11.985.066c-6.573 0-11.921 5.348-11.921 11.92 0 6.574 5.348 11.922 11.921 11.922 6.573 0 11.921-5.348 11.921-11.922 0-6.573-5.347-11.92-11.921-11.92Zm0 22.842c-6.022 0-10.921-4.899-10.921-10.922 0-6.021 4.899-10.92 10.921-10.92 6.021 0 10.921 4.899 10.921 10.92 0 6.023-4.899 10.922-10.921 10.922Z"></path>
+                <path d="M11.988 8.977c1.642 0 2.978-1.335 2.978-2.977 0-1.642-1.336-2.978-2.978-2.978 -1.642 0-2.977 1.336-2.977 2.978 0 1.642 1.336 2.977 2.977 2.977Zm0-4.955c1.091 0 1.978.887 1.978 1.978 0 1.091-.887 1.977-1.978 1.977 -1.09 0-1.978-.887-1.978-1.977 0-1.09.888-1.978 1.978-1.978Z"></path>
+                <path d="M15.502 17.045v0h-.436v-6.275c0-.441-.357-.8-.797-.8h-4.84c-.411 0-.772.18-1.017.506 -.198.264-.307.609-.307.972 0 .848.556 1.463 1.323 1.463h.7v4.132h-.7c-.754 0-1.324.638-1.324 1.484 0 .844.557 1.457 1.324 1.457h6.072c.472 0 .878-.233 1.113-.642 .283-.491.28-1.155-.007-1.652 -.236-.41-.639-.645-1.104-.645Zm.246 1.799c-.058.099-.131.141-.247.141h-6.072c-.308 0-.324-.381-.324-.457 0-.005.004-.484.324-.484h1.2c.276 0 .5-.224.5-.5v-5.132c0-.276-.224-.5-.5-.5h-1.2c-.308 0-.323-.385-.323-.463 0-.02.003-.479.323-.479h4.638v6.575c0 .276.224.5.5.5h.935c.001 0 .001 0 .001 0 .076 0 .165.018.239.147 .106.183.108.475.006.652Z"></path>
+            </g>
+        </svg>
+    </div>
+    <div id="infobox" class="hidden">
+        <div>
+            <h3>Lörem ipsum? Lörem ipsum!</h3>
+            <p>Bra skisstext på gedigen låstassvenska. Äntligen!</p>
+            <p>I framtiden kommer det att finnas mera info här, samt länk till figmaplugin och grejer.</p>
+        </div>
+
+    </div>
+    <!-- partial -->
+    <script>
+        /* window.onload = () =>
+            'serviceWorker' in navigator && navigator.serviceWorker.register('./sw.js'); */
+    </script>
+    <script type="module" src="./main.js"></script>
+
+</body></html>
