@@ -1,6 +1,8 @@
 {
     "files.autoSave": "onFocusChange",
+    "editor.fontFamily": "JetBrains Mono, Monaco, Menlo, 'Courier New', monospace",
+    "editor.wordWrap": "on",
     "editor.fontSize": 11,
-    "editor.fontFamily": "Monaco, Menlo, 'Courier New', monospace",
-    "editor.wordWrap": "on"
+    "editor.insertSpaces": false,
+    "editor.fontLigatures": true
 }

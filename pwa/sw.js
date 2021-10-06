@@ -1,5 +1,5 @@
 const 
-    currentCache = "V2", 
+    currentCache = "V4", 
       
     files = [
         './index.html',

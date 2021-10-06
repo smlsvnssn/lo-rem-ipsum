@@ -337,6 +337,10 @@ blockquote:before {
   line-height: 2.5rem;
 }
 
+#infobox a {
+  color: var(--bg);
+}
+
 #infobox.hidden {
   background: none;
   pointer-events: none;

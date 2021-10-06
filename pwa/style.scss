@@ -308,6 +308,10 @@ blockquote {
         line-height: 2.5rem;
     }
 
+    a {
+        color: var(--bg);
+    }
+
     &.hidden {
         background: none;
         pointer-events: none;

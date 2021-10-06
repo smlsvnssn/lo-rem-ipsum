@@ -74,6 +74,11 @@
                     <input type="number" id="namnFrequency" class="slider" value="0" min="0" max="100" step="1">
                 </div>
                 <div>
+                    <legend>Andel bizznizz buzz (%)</legend>
+                    <input type="range" id="buzzFrequency" class="slider" value="0" min="0" max="100" step="1">
+                    <input type="number" id="buzzFrequency" class="slider" value="0" min="0" max="100" step="1">
+                </div>
+                <div>
                     <legend>Punchline</legend>
                     <input type="text" id="punchline" value="Du kan vara drabbad.">
                 </div>
@@ -145,14 +150,14 @@
         <div>
             <h3>Lörem ipsum? Lörem ipsum!</h3>
             <p>Bra skisstext på gedigen låstassvenska. Äntligen!</p>
-            <p>I framtiden kommer det att finnas mera info här, samt länk till figmaplugin och grejer.</p>
+            <p>Lörem ipsum finns också som <a href="https://www.figma.com/community/plugin/944967340381505004/L%C3%B6rem-Ipsum" target=_blank>figmaplugin</a>. Om du vill bygga vidare hittar du koden på <a href="https://codepen.io/smlsvnssn/pen/VwKPMwM" target=_blank>codepen</a>.</p>
         </div>
 
     </div>
     <!-- partial -->
     <script>
-        /* window.onload = () =>
-            'serviceWorker' in navigator && navigator.serviceWorker.register('./sw.js'); */
+        window.onload = () =>
+            'serviceWorker' in navigator && navigator.serviceWorker.register('./sw.js'); 
     </script>
     <script type="module" src="./main.js"></script>
 

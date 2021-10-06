@@ -1,5 +1,5 @@
-import './imports/öQuery.min.js';
-import { löremIpsum } from './imports/löremIpsum.js';
+import './imports/oQuery.min.js';
+import { löremIpsum } from './imports/loremIpsum.js';
 
 ö(() => {
     const
@@ -195,11 +195,13 @@ import { löremIpsum } from './imports/löremIpsum.js';
                         nyordFrequency: ö('#nyordFrequency').val() / 100,
                         neologismerFrequency: ö('#neologismerFrequency').val() / 100,
                         namnFrequency: ö('#namnFrequency').val() / 100,
+                        buzzFrequency: ö('#buzzFrequency').val() / 100,
                         useLörem: ö('#useLörem').e().checked,
                         punchline: ö('#punchline').val(),
                         wrapInDiv: ö('#wrapInDiv').e().checked,
                         paragraphStartWrap: headline.e().checked ? '<h2>' : '<p>',
                         paragraphEndWrap: headline.e().checked ? '</h2>' : '</p>',
+                        
                         alwaysWrapParagraph: ö('#alwaysWrapParagraph').e().checked
                     }
                 )}
@@ -213,7 +215,8 @@ import { löremIpsum } from './imports/löremIpsum.js';
 		isName: ${ö('#isName').e().checked},
 		nyordFrequency: ${ö('#nyordFrequency').val() / 100},
 		neologismerFrequency: ${ö('#neologismerFrequency').val() / 100},
-		namnFrequency: ${ö('#namnFrequency').val() / 100},
+        namnFrequency: ${ö('#namnFrequency').val() / 100},
+        buzzFrequency: ${ö('#buzzFrequency').val() / 100},
 		useLörem: ${ö('#useLörem').e().checked},
 		punchline: '${ö('#punchline').val()}',
 		wrapInDiv: ${ö('#wrapInDiv').e().checked},
